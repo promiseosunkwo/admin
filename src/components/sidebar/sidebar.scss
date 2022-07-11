@@ -1,0 +1,103 @@
+.sidebar{
+    // background-color: bisque;
+    flex: 1;
+    border-right: 0.5px solid rgba(211, 211, 211, 0.262);
+    min-height: 100vh;
+    background-color: white;
+
+    .top{
+        // background-color: burlywood;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .logo{
+            font-size: 20px;
+            font-weight: bold;
+            color:rgb(150, 83, 213);
+        }
+    }
+    hr{
+        height: 0;
+        border: 0.5px solid rgba(211, 211, 211, 0.262);
+    }
+
+    .center{
+        padding-left: 10px;
+
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            
+            // .clicked{
+            // background-color: rgba(150, 83, 213, 0.267);
+            // }
+        }
+
+        .title{
+            font-size: 15px;
+            font-weight: bold;
+            color:#999;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        li{
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            cursor: pointer;
+
+            
+
+
+            &:hover{
+                background-color: rgba(150, 83, 213, 0.267);
+                // color: white;
+            }
+
+
+            .icon{
+                font-size: 18px;
+                color:  rgb(150, 83, 213);
+            }
+
+            span{
+                font-size: 13px;
+                font-weight: 600;
+                color: #888;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .bottom{
+        display: flex;
+        align-items: center;
+        margin: 10px;
+
+        .colorOption{
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            border: 1px solid rgb(150, 83, 213);
+            cursor: pointer;
+            margin: 5px;
+
+            &:nth-child(1){
+                background-color: whitesmoke;
+            }
+            &:nth-child(2){
+                background-color: #333;
+            }
+
+            &.selected{
+                border: 3px solid rgb(180, 13, 180);
+            }
+           
+        }
+    }
+}

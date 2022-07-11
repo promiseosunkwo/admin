@@ -1,0 +1,72 @@
+.navbar{
+    height: 50px;
+    border-bottom: 0.5px solid rgba(211, 211, 211, 0.262);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+
+    .wrapper{
+        width: 100%; //for the justify content to work you have to use a width of 100% and always use colors to style to get the containers
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .search{
+            display: flex;
+            align-items: center;
+            border: 0.5px solid lightgray;
+            padding: 3px;
+
+            input{
+                border: none;
+                outline: none; //outline clears the border that shows onclicking inside the input field 
+                background: transparent; //for the darkmode, if u dont put it then it will hv another color
+
+                &::placeholder{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .items{
+            display: flex;
+            align-items: center;
+
+            .item{
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                position: relative; //for the notification icon, the position is absolute so the parent div must be relative
+
+                .icon{
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+
+                .avatar{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                }
+
+                .counter{
+                    width: 15px;
+                    height: 15px;
+                    background-color: red;
+                    color: white;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 10px;
+                    font-weight: bold;
+                    position: absolute; //the parent div is set to relative 
+                    top: -5px; //for the notification icon to tilt a little to the right
+                    right: -5px; //for the notification icon to tilt a little to the right
+                }
+            }
+        }
+    }
+}
